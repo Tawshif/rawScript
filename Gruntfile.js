@@ -49,16 +49,21 @@ module.exports = function(grunt) {
             js: {
                 files: ['resources/js/**/*.js'],
                 tasks: ['default']
-            }
+            },
+            livereload: {
+              // Here we watch the files the sass task will compile to
+              // These files are sent to the live reload server after sass compiles to them
+              options: {
+                    livereload: true 
+                },
+              files: ['dist/**/*'],
+            },
         },
 
         /** 
          *  concat task configuration goes here.
          **/
         concat: {
-            options: {
-                separator: ';',
-            },
             vendor: {
                 src: [
                     'resources/vendor/jquery/dist/jquery.js'
@@ -71,16 +76,7 @@ module.exports = function(grunt) {
                 ],
                 dest: 'dist/main.js',
             },
-        },
-
-        /** 
-         *  uglify task configuration goes here.
-         **/
-        uglify: {
-
-        },
-
-
+        }
 
     });
 
@@ -92,9 +88,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
 
-
     // registaring tasks
-    grunt.registerTask('default', ['sass_globbing:unify', 'sass', 'concat', 'watch:sass']);
+    grunt.registerTask('default', ['sass_globbing:unify', 'sass', 'concat', 'watch']);
 
 
 }
