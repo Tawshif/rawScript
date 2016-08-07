@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -54,21 +54,21 @@ module.exports = function (grunt) {
         cssmin: {
             desktop: {
                 files: [{
-                        expand: true,
-                        cwd: 'public/style',
-                        src: ['style.css', '!*.min.css'],
-                        dest: 'public/style',
-                        ext: '.min.css'
-                    }]
+                    expand: true,
+                    cwd: 'public/style',
+                    src: ['style.css', '!*.min.css'],
+                    dest: 'public/style',
+                    ext: '.min.css'
+                }]
             },
             mobile: {
                 files: [{
-                        expand: true,
-                        cwd: 'public/style',
-                        src: ['style_mobile.css', '!*.min.css'],
-                        dest: 'public/style',
-                        ext: '.min.css'
-                    }]
+                    expand: true,
+                    cwd: 'public/style',
+                    src: ['style_mobile.css', '!*.min.css'],
+                    dest: 'public/style',
+                    ext: '.min.css'
+                }]
             }
         },
         // End of style grunt 
@@ -148,7 +148,7 @@ module.exports = function (grunt) {
                     'resources/assets/vendor/slick-carousel/slick/slick.min.js',
                     'resources/assets/vendor/angular-slick-carousel/dist/angular-slick.min.js',
                     'resources/assets/vendor/angular-ui/angular-ui.min.js'
-                    
+
                 ],
                 dest: 'public/js/mobile/prd/vendor/vendor_concat.js'
             },
@@ -226,7 +226,7 @@ module.exports = function (grunt) {
             appMobileJsDev: {
                 src: 'resources/assets/js/mobile/**/*.js',
                 dest: 'public/js/mobile/dev/app/app.js'
-         },
+            },
             desktop_css: {
                 src: [
                     'resources/assets/vendor/bootstrap/dist/css/bootstrap.min.css',
@@ -267,9 +267,6 @@ module.exports = function (grunt) {
             }
         },
         //End of concat
-
-
-
         uglify: {
             vendor: {
                 files: {
@@ -341,7 +338,7 @@ module.exports = function (grunt) {
     /*
      Command list
      
-     grunt dev	
+     grunt dev  
      grunt watch
      
      grunt deploy
