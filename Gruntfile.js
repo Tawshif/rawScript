@@ -73,13 +73,19 @@ module.exports = function(grunt) {
             },
         },
 
-        /** 
-         *  uglify task configuration goes here.
-         **/
-        uglify: {
-
-        },
-
+        browserSync: {
+            bsFiles: {
+                src: [
+                    'app/*.html',
+                    'dist/main.css',
+                    'dist/*.js'
+                ]
+            },
+            options: {
+                watchTask: true,
+                server: './app'
+            }
+        }
 
 
     });
@@ -90,11 +96,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
+    grunt.loadNpmTasks('grunt-browser-sync');
 
 
     // registaring tasks
-    grunt.registerTask('default', ['sass_globbing:unify', 'sass', 'concat', 'watch:sass']);
+    grunt.registerTask('default', ['sass_globbing:unify', 'sass', 'concat', 'watch', 'browserSync']);
 
 
 }
