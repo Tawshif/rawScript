@@ -2,13 +2,24 @@
   margin: 0;
   padding: 0; }
 
-h1 {
+body {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 22.652px; }
 
+h1 {
+  font-size: 36px;
+  color: blue; }
+
+h2 {
+  font-size: 24px; }
+
 p {
-  font-siz: 14px;
+  font-size: 14px;
   line-height: 16px; }
+
+strong {
+  font-size: 100%;
+  font-weight: bold; }
 
 nav {
   width: 100%;
