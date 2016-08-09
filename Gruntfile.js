@@ -73,18 +73,18 @@ module.exports = function(grunt) {
             },
         },
 
-        browserSync: {
-            bsFiles: {
-                src: [
-                    'index.html',
-                    'dist/main.css',
-                    'dist/main.js'
-                ]
-            },
-            options: {
-                server: './app'
-            }
-        }
+        // browserSync: {
+        //     bsFiles: {
+        //         src: [
+        //             'index.html',
+        //             'dist/main.css',
+        //             'dist/main.js'
+        //         ]
+        //     },
+        //     options: {
+        //         server: './app'
+        //     }
+        // }
 
 
     });
@@ -95,11 +95,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-browser-sync');
+    // grunt.loadNpmTasks('grunt-browser-sync');
 
 
     // registaring tasks
-    grunt.registerTask('default', ['sass_globbing:unify', 'sass', 'concat', 'watch', 'browserSync']);
+    grunt.registerTask('default', ['sass_globbing:unify', 'sass', 'concat', 'watch']);
 
 
 }
