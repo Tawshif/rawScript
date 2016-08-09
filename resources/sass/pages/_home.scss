@@ -1,0 +1,52 @@
+section {
+    .todo {
+        float: left;
+        width: 100%;
+        list-style: none;
+        li {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px;
+            position: relative;
+            float: left;
+            width: 100%;
+            height: 50px;
+            margin: 0 0 10px 0;
+            padding: 14px 100px 14px 14px;
+            color: $textColor;
+            background: $white;
+            @include radius(5px);
+            @include box-shadow(0, 1px, 2px, rgba(44, 62, 80, .10));
+            @include boxSizing();
+            &:last-of-type {
+                margin: 0;
+            }
+            .actionButtons {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100px;
+                height: 50px;
+                button {
+                    position: relative;
+                    float: left;
+                    width: 50px;
+                    height: 50px;
+                    background: $white;
+                    @extend %btn-custom;
+                    @include appearance(none);
+                    &:last-of-type:before {
+                        position: absolute;
+                        top: 10px;
+                        left: 0;
+                        width: 1px;
+                        height: 30px;
+                        content: '';
+                        background: #edf0f1;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

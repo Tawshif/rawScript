@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+    require('load-grunt-tasks')(grunt);
+
     grunt.initConfig({
         /**
          *  Get package meta data
@@ -51,10 +53,10 @@ module.exports = function(grunt) {
                 tasks: ['default']
             },
             livereload: {
-              // Here we watch the files the sass task will compile to
-              // These files are sent to the live reload server after sass compiles to them
-              options: { livereload: false },
-              files: ['dest/**/*'],
+                // Here we watch the files the sass task will compile to
+                // These files are sent to the live reload server after sass compiles to them
+                options: { livereload: false },
+                files: ['dest/**/*'],
             },
 
         },
@@ -81,11 +83,10 @@ module.exports = function(grunt) {
     });
 
     // loading tasks
-    grunt.loadNpmTasks('grunt-sass-globbing');
-    grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    // grunt.loadNpmTasks('grunt-sass-globbing');
+    // grunt.loadNpmTasks('grunt-contrib-concat');
+    // grunt.loadNpmTasks('grunt-contrib-jshint');
+    // grunt.loadNpmTasks('grunt-contrib-watch');
 
 
     // registaring tasks

@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway:100,300,400,700';
-body, input, button {
+html, body, input, button {
   font-family: 'Raleway', sans-serif;
   font-weight: normal; }
 
@@ -7,7 +7,7 @@ body, input, button {
   margin: 0;
   padding: 0; }
 
-main section .todo li .actionButtons button, header button {
+header button, section .todo li .actionButtons button {
   border: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -16,64 +16,30 @@ main section .todo li .actionButtons button, header button {
   appearance: none;
   cursor: pointer; }
 
-body {
-  padding: 80px 0 0 0;
-  background: #edf0f1; }
+button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px; }
 
-main {
-  padding: 15px; }
-  main section .todo {
-    width: 100%;
-    list-style: none;
-    float: left; }
-    main section .todo li {
-      margin: 0 0 10px 0;
-      padding: 0 100px 0 0;
-      width: 100%;
-      height: 50px;
-      float: left;
-      position: relative;
-      background: #fff;
-      -webkit-border-radius: 5px;
-      border-radius: 5px;
-      -webkit-box-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
-      -moz-box-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
-      box-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box; }
-      main section .todo li:last-of-type {
-        margin: 0; }
-      main section .todo li .actionButtons {
-        width: 100px;
-        height: 50px;
-        position: absolute;
-        top: 0;
-        right: 0; }
-        main section .todo li .actionButtons button {
-          width: 50px;
-          height: 50px;
-          float: left;
-          position: relative;
-          background: #fff;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          -ms-appearance: none;
-          -o-appearance: none;
-          appearance: none; }
-          main section .todo li .actionButtons button:last-of-type:before {
-            content: "";
-            width: 1px;
-            height: 30px;
-            position: absolute;
-            top: 10px;
-            left: 0;
-            background: #edf0f1; }
+.noFill {
+  fill: none; }
 
-.boxSizing {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+.remove .fill {
+  fill: #c0cecb; }
+
+.remove:hover .fill {
+  fill: #e85656; }
+
+.complete svg {
+  border: 1.5px solid #25b99a;
+  -webkit-border-radius: 50%;
+  border-radius: 50%; }
+
+.complete .fill {
+  fill: #25b99a; }
 
 header {
   position: fixed;
@@ -137,3 +103,61 @@ header {
       margin: -8px 0 0 -8px; }
       header button svg .fill {
         fill: #25b99a; }
+
+body {
+  padding: 80px 0 0 0;
+  background: #edf0f1; }
+  body main {
+    padding: 15px; }
+
+section .todo {
+  float: left;
+  width: 100%;
+  list-style: none; }
+  section .todo li {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 50px;
+    margin: 0 0 10px 0;
+    padding: 14px 100px 14px 14px;
+    color: #444;
+    background: #fff;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
+    -moz-box-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
+    box-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    section .todo li:last-of-type {
+      margin: 0; }
+    section .todo li .actionButtons {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 50px; }
+      section .todo li .actionButtons button {
+        position: relative;
+        float: left;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none; }
+        section .todo li .actionButtons button:last-of-type:before {
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 1px;
+          height: 30px;
+          content: '';
+          background: #edf0f1; }

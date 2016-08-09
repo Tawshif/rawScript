@@ -1,0 +1,32 @@
+button {
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 22px;
+        height: 22px;
+        margin: -11px 0 0 -11px;
+    }
+}
+.noFill {
+    fill: none;
+}
+.remove {
+    .fill {
+        fill: $removeBtn;
+    }
+    &:hover{
+        .fill{
+        fill: $removeBtnHover;
+        }
+    }
+}
+.complete {
+    svg{
+        border:1.5px solid $lightGreen;
+        @include radius(50%);
+    }
+    .fill {
+        fill: $lightGreen;
+    }
+}
