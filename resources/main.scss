@@ -1,5 +1,9 @@
 @import 'vendor/bourbon/app/assets/stylesheets/bourbon';
-@import 'sass/base/reset';
-@import 'sass/base/typography';
+@import 'sass/base/1variables';
+@import 'sass/base/2mixins';
+@import 'sass/base/3typography';
+@import 'sass/base/4reset';
+@import 'sass/base/5placeholders';
+@import 'sass/components/body';
+@import 'sass/components/header';
 @import 'sass/components/navigation';
-@import 'sass/helpers/mixin';

@@ -1,0 +1,8 @@
+// @include font-face("Roboto", "../public/fonts/Raleway-Thin.ttf", 100, $file-formats: ttf);
+// @include font-face("Roboto", "../public/fonts/Raleway-Regular", 400, $file-formats: ttf);
+// @include font-face("Roboto", "../public/fonts/Raleway-Bold", 700, $file-formats: ttf);
+@import 'https://fonts.googleapis.com/css?family=Raleway:100,300,400,700';
+body, input, button{
+	font-family:'Raleway', sans-serif;
+    font-weight: normal ;
+}

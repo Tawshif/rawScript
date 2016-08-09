@@ -1,0 +1,5 @@
+%btn-custom{
+	border: none; 
+ 	@include appearance(none);
+    cursor: pointer;
+}
