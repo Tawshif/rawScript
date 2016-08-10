@@ -6,6 +6,7 @@ button {
         width: 22px;
         height: 22px;
         margin: -11px 0 0 -11px;
+        transition: all 0.5s ease;
     }
 }
 .noFill {
@@ -14,10 +15,11 @@ button {
 .remove {
     .fill {
         fill: $removeBtn;
+         transition: all 0.5s ease;
     }
     &:hover{
         .fill{
-        fill: $removeBtnHover;
+            fill: $removeBtnHover;
         }
     }
 }
@@ -28,5 +30,13 @@ button {
     }
     .fill {
         fill: $lightGreen;
+    }
+    &:hover{
+        .fill{
+            fill: $white;
+        }
+        svg{
+         background: $lightGreen;   
+        }
     }
 }

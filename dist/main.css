@@ -22,13 +22,15 @@ button svg {
   left: 50%;
   width: 22px;
   height: 22px;
-  margin: -11px 0 0 -11px; }
+  margin: -11px 0 0 -11px;
+  transition: all 0.5s ease; }
 
 .noFill {
   fill: none; }
 
 .remove .fill {
-  fill: #c0cecb; }
+  fill: #c0cecb;
+  transition: all 0.5s ease; }
 
 .remove:hover .fill {
   fill: #e85656; }
@@ -40,6 +42,12 @@ button svg {
 
 .complete .fill {
   fill: #25b99a; }
+
+.complete:hover .fill {
+  fill: #fff; }
+
+.complete:hover svg {
+  background: #25b99a; }
 
 header {
   position: fixed;
@@ -108,12 +116,13 @@ body {
   padding: 80px 0 0 0;
   background: #edf0f1; }
   body main {
-    padding: 15px; }
+    padding: 0px 15px 15px; }
 
 section .todo {
   float: left;
   width: 100%;
-  list-style: none; }
+  list-style: none;
+  margin-top: 15px; }
   section .todo li {
     font-size: 14px;
     font-weight: 600;
