@@ -14,6 +14,14 @@ window.onload = function () {
 		
 	});
 
+	function completed() {
+		console.log("completed");
+	}
+
+	function removeItem() {
+		console.log("remove");
+	}
+
 	function addItemTodo(text) {
 		
 		var list = document.getElementById('todo');
@@ -27,10 +35,12 @@ window.onload = function () {
 		var complete = document.createElement("button");
 			complete.classList.add("complete");
 			complete.innerHTML = completeSVG;
+			complete.addEventListener('click', completed);		
 
 		var remove = document.createElement("button");
 			remove.classList.add('remove');
 			remove.innerHTML = removeSVG;
+			remove.addEventListener('click', removeItem)
 
 		buttonDiv.appendChild(remove);
 		buttonDiv.appendChild(complete);
