@@ -82,13 +82,6 @@ module.exports = function(grunt) {
 
     });
 
-    // loading tasks
-    // grunt.loadNpmTasks('grunt-sass-globbing');
-    // grunt.loadNpmTasks('grunt-contrib-concat');
-    // grunt.loadNpmTasks('grunt-contrib-jshint');
-    // grunt.loadNpmTasks('grunt-contrib-watch');
-
-
     // registaring tasks
     grunt.registerTask('default', ['sass_globbing:unify', 'sass', 'concat', 'watch']);
 
