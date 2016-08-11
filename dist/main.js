@@ -35,7 +35,6 @@ window.onload = function () {
 		buttonDiv.appendChild(remove);
 		buttonDiv.appendChild(complete);
 		item.appendChild(buttonDiv);
-		
 		list.insertBefore(item, list.childNodes[0]);
 
 	}
