@@ -19,9 +19,9 @@ window.onload = function () {
 
 		var item = this.parentNode.parentNode;
 
-		item.parentNode.removeChild(item);
+		var data = item.parentNode.removeChild(item);
 
-		list.insertBefore(item, list.childNodes[0]);
+		list.insertBefore(data, list.childNodes[0]);
 	}
 
 	function removeItem() {
