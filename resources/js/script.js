@@ -15,11 +15,19 @@ window.onload = function () {
 	});
 
 	function completed() {
-		console.log("completed");
+		var list = document.getElementById('completed');
+
+		var item = this.parentNode.parentNode;
+
+		item.parentNode.removeChild(item);
+
+		list.insertBefore(item, list.childNodes[0]);
 	}
 
 	function removeItem() {
-		console.log("remove");
+		var item = this.parentNode.parentNode;
+		item.remove();
+		console.log(item);
 	}
 
 	function addItemTodo(text) {
