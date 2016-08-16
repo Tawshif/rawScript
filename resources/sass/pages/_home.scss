@@ -3,7 +3,6 @@ section {
         float: left;
         width: 100%;
         list-style: none;
-        margin-top: 15px;
         li {
             font-size: 14px;
             font-weight: 600;
@@ -48,6 +47,25 @@ section {
                     
                 }
             }
+        }
+
+        &#completed {
+            &:not(:empty) {
+                position: relative;
+                padding: 60px 0 0 0;
+            }
+            &:before {
+                position: absolute;
+                top: 30px;
+                left: 50%;
+                width: 150px;
+                height: 1px;
+                margin: 0 0 0 -75px;
+                content: '';
+                background: lighten($lightGreen, 40);
+            }
+
+            
         }
     }
 }

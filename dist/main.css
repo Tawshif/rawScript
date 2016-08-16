@@ -116,13 +116,12 @@ body {
   padding: 80px 0 0 0;
   background: #edf0f1; }
   body main {
-    padding: 0px 15px 15px; }
+    padding: 15px; }
 
 section .todo {
   float: left;
   width: 100%;
-  list-style: none;
-  margin-top: 15px; }
+  list-style: none; }
   section .todo li {
     font-size: 14px;
     font-weight: 600;
@@ -170,3 +169,15 @@ section .todo {
           height: 30px;
           content: '';
           background: #edf0f1; }
+  section .todo#completed:not(:empty) {
+    position: relative;
+    padding: 60px 0 0 0; }
+  section .todo#completed:before {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 150px;
+    height: 1px;
+    margin: 0 0 0 -75px;
+    content: '';
+    background: #b9f1e5; }

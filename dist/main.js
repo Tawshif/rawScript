@@ -18,10 +18,14 @@ window.onload = function () {
 		var list = document.getElementById('completed');
 
 		var item = this.parentNode.parentNode;
+		
+		var div = document.createElement('li')
+		div.innerText = item.innerText;
 
-		var data = item.parentNode.removeChild(item);
+		// item.remove(document.getElementByClassName('actionButtons'));
 
-		list.insertBefore(data, list.childNodes[0]);
+		list.insertBefore(div, list.childNodes[0]);
+		item.remove();
 	}
 
 	function removeItem() {
@@ -36,6 +40,7 @@ window.onload = function () {
 
 		var item = document.createElement("li");
 			item.innerText = text;
+
 
 		var buttonDiv = document.createElement("div");
 			buttonDiv.classList.add('actionButtons');
@@ -54,6 +59,8 @@ window.onload = function () {
 		buttonDiv.appendChild(complete);
 		item.appendChild(buttonDiv);
 		list.insertBefore(item, list.childNodes[0]);
+
+		document.getElementById('item').value = '';
 
 	}
 
