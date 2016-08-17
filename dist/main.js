@@ -83,6 +83,7 @@ var getTodo = function(e) {
     if (value) {
         console.log(value);
         var todo = document.getElementById('todo');
+        
         var html = '<li> ' + value;
         html += '<div class="actionButtons">';
         html += '<button class="remove" onclick="remove()">';
@@ -93,7 +94,8 @@ var getTodo = function(e) {
         html += '</button>';
         html += '</div>';
         html += '</li>';
-        todo.innerHTML = html;
+
+        todo .innerHTML = html;
         document.getElementById('item').value = "";
     }
 }
