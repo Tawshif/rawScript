@@ -8,7 +8,7 @@ var getTodo = function(e) {
         var list = document.getElementById('todo');
         
         var item = document.createElement('li');
-            item.classList.add('todo'+index);
+            item.classList.add('todo-'+index);
         var html = value;
             html += '<div class="actionButtons">';
             html += '<button class="remove" onclick="remove()">';
@@ -20,24 +20,18 @@ var getTodo = function(e) {
             html += '</div>';
 
             item.innerHTML = html;
-
-        console.log(item);
-        
-        // list.innerHTML = html + list.innerHTML ;
-        
-        list.insertBefore(item, list.childNodes[0])
-        
-        index + 1;
+            list.insertBefore(item, list.childNodes[0])            
+            index ++ ;
 
         document.getElementById('item').value = "";
     }
 }
 
 function completed() {
-    
+    console.log(this);
 }
 
-function removeItem() {
-    
+function remove() {
+    console.log(this);
 }
 window.onload = function() {}
