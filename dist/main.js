@@ -80,13 +80,13 @@ var index = 0;
 var getTodo = function(e) {
     e.preventDefault();
     var value = document.getElementById('item').value;
+    value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     if (value) {
 
         var list = document.getElementById('todo');
         
         var item = document.createElement('li');
             item.setAttribute('id','todo-'+index);
-        // var html = '<div class="count"><span>'+ (000 + index+1) +'</span></div>';
             var html = value;
             html += '<div class="actionButtons" id="btn-'+index+'">';
             html += '<button class="remove" onClick="remove(this)" divId="'+index+'">';
@@ -106,20 +106,13 @@ var getTodo = function(e) {
 }
 
 function completed(data) {
-
     var divId = data.getAttribute('divId');
-
-    // var done = document.createElement('li');
-    
-    //     done.setAttribute('id', 'complete-'+divId);
-    
     var item = document.getElementById('todo-'+divId);
     var buttons = document.getElementById('btn-'+divId);
         buttons.remove();
         console.log(buttons);
         var list = document.getElementById('completed');
         list.insertBefore(item, list.childNodes[0] );
-
 
 }
 
