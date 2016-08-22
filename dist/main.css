@@ -118,6 +118,33 @@ body {
   body main {
     padding: 15px; }
 
+section .count {
+  position: relative;
+  top: -14px;
+  left: -14px;
+  width: 40px;
+  height: 50px;
+  display: inline-block;
+  float: left; }
+  section .count:after {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 1px;
+    height: 30px;
+    content: '';
+    background: #edf0f1; }
+  section .count:empty {
+    display: none; }
+  section .count span {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -18px 0px 0px -7px;
+    float: left;
+    font-size: 24px;
+    line-height: 36px; }
+
 section .todo {
   float: left;
   width: 100%;
