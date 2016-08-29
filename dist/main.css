@@ -122,10 +122,10 @@ section .count {
   position: relative;
   top: -14px;
   left: -14px;
-  width: 40px;
-  height: 50px;
   display: inline-block;
-  float: left; }
+  float: left;
+  width: 40px;
+  height: 50px; }
   section .count:after {
     position: absolute;
     top: 10px;
@@ -137,13 +137,13 @@ section .count {
   section .count:empty {
     display: none; }
   section .count span {
+    font-size: 24px;
+    line-height: 36px;
     position: relative;
     top: 50%;
     left: 50%;
-    margin: -18px 0px 0px -7px;
     float: left;
-    font-size: 24px;
-    line-height: 36px; }
+    margin: -18px 0 0 -7px; }
 
 section .todo {
   float: left;
@@ -196,7 +196,7 @@ section .todo {
           height: 30px;
           content: '';
           background: #edf0f1; }
-  section .todo#completed:not(:empty) {
+  section .todo#completed:not(empty) {
     position: relative;
     padding: 60px 0 0 0; }
   section .todo#completed:before {

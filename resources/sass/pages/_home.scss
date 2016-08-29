@@ -1,33 +1,33 @@
 section {
-    .count{
+    .count {
         position: relative;
         top: -14px;
         left: -14px;
-        width: 40px;
-        height: 50px;
         display: inline-block;
         float: left;
-        &:after{
+        width: 40px;
+        height: 50px;
+        &:after {
             position: absolute;
             top: 10px;
             right: 0;
             width: 1px;
             height: 30px;
             content: '';
-            background: #edf0f1; 
+            background: #edf0f1;
         }
-        &:empty{
+        &:empty {
             display: none;
         }
-        span{
+        span {
+            font-size: 24px;
+            line-height: 36px;
             position: relative;
             top: 50%;
             left: 50%;
-            margin: -18px 0px 0px -7px;
             float: left;
-            font-size: 24px;
-            line-height: 36px;
-        } 
+            margin: -18px 0 0 -7px;
+        }
     }
     .todo {
         float: left;
@@ -74,13 +74,11 @@ section {
                         content: '';
                         background: #edf0f1;
                     }
-                    
                 }
             }
         }
-
         &#completed {
-            &:not(:empty) {
+            &:not(empty) {
                 position: relative;
                 padding: 60px 0 0 0;
             }
@@ -94,8 +92,6 @@ section {
                 content: '';
                 background: lighten($lightGreen, 40);
             }
-
-            
         }
     }
 }
