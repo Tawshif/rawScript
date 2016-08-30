@@ -37,4 +37,30 @@ function remove(data) {
     var item = document.getElementById('todo-' + divId);
     item.remove();
 }
-window.onload = function () {}
+
+// Get JSON data from server
+
+var get = function () {
+    var xhttp;
+    if (window.XMLHttpRequest) {
+        xhttp = new XMLHttpRequest();
+    } else {
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            var item = document.createElement("pre");
+            var list = document.getElementById('todo');
+
+            item.innerHTML = xhttp.responseText;
+            list.insertBefore(item, list.childNodes[0]);
+
+            console.log(item);
+        }
+    };
+    xhttp.open("GET", "http://localhost:3000/todo?t=" + Math.random(), true);
+    xhttp.send();
+}
+window.onload = function () {
+    get();
+}
