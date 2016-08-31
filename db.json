@@ -3,7 +3,7 @@
     {
       "id": 1,
       "complete": false,
-      "todo": "task name 1 edited"
+      "todo": "task name 1"
     },
     {
       "id": 2,
@@ -31,10 +31,14 @@
       "todo": "task name 6 posted"
     },
     {
-      "id": 7
+      "id": 7,
+      "complete": false,
+      "todo": "task name 7 posted"
     },
     {
-      "id": 8
+      "id": 8,
+      "complete": false,
+      "todo": "task name 8 posted"
     }
   ]
 }
